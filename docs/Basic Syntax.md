@@ -1,5 +1,5 @@
-[[главное меню]]
----
+# [[главное меню]]
+
 
 Теги: #python #syntax #identifiers #keywords #indentation #strings #comments #input #cli
 
