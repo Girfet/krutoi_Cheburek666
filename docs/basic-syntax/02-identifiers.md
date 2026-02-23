@@ -4,7 +4,7 @@
 
 ## Идентификаторы Python
 
-Идентификатор в Python — это имя, используемое для идентификации [переменной](https://www.tutorialspoint.com/python/python_variables.htm), [функции](https://www.tutorialspoint.com/python/python_functions.htm), [класса](https://www.tutorialspoint.com/python/python_object_classes.htm), [модуля](https://www.tutorialspoint.com/python/python_modules.htm) или другого объекта. Идентификатор начинается с буквы от A до Z или от a до z, либо с символа подчеркивания (_), за которым следует ноль или более букв, символов подчеркивания и цифр (от 0 до 9).
+Идентификатор в Python — это имя, используемое для идентификации [переменной](https://www.tutorialspoint.com/python/python_variables.htm), [функции](https://www.tutorialspoint.com/python/python_functions.htm), [класса](https://www.tutorialspoint.com/python/python_object_classes.htm), [модуля](https://www.tutorialspoint.com/python/python_modules.htm) или другого объекта. Идентификатор начинается с буквы от A до Z или от a до z, либо с символа подчеркивания (\_), за которым следует ноль или более букв, символов подчеркивания и цифр (от 0 до 9).
 
 В Python не допускаются знаки препинания, такие как @, $ и %, внутри идентификаторов.
 
