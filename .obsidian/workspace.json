@@ -11,13 +11,32 @@
             "id": "8a6225e202838834",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "docs/variable (Переменные).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "variable (Переменные)"
+            }
+          },
+          {
+            "id": "e54e014849b01d4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/variable/Понимание переменных областей видимости/Области видимости.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Области видимости"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#variable",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 293.5
   },
   "right": {
     "id": "1e2f266e7fc65f92",
@@ -176,42 +195,46 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "8a6225e202838834",
+  "active": "e54e014849b01d4b",
   "lastOpenFiles": [
-    "docs/manual.md",
-    "manual.md",
+    "docs/variable/Использование дополнительных способов создания переменных/Выражения присваивания.md",
+    "docs/variable/Использование дополнительных способов создания переменных/Итеративная распаковка.md",
+    "docs/variable/Использование дополнительных способов создания переменных/Параллельное назначение.md",
     "docs/variable (Переменные).md",
-    "docs/variable/Без названия.md",
-    "docs/variable",
-    "docs/Basic Syntax.md",
-    "docs/Learn the Basic.md",
-    "docs/basic-syntax/07-comments.md",
-    "docs/basic-syntax/03-keywords.md",
-    "docs/главное меню.md",
     "docs/Python learn.md",
-    "docs/basic-syntax/01-modes.md",
+    "docs/variable/Понимание переменных областей видимости/01-Global variables.md",
+    "docs/variable/Понимание переменных областей видимости/Области видимости.md",
+    "docs/variable/Понимание переменных областей видимости",
+    "docs/variable/Работа с переменными в python/01-Creating variables.md",
+    "docs/variable/Основные характеристики переменных/Основные характеристики переменных.md",
+    "Pasted image 20260302020826.png",
+    "docs/variable/Использование дополнительных способов создания переменных",
+    "docs/manual.md",
+    "docs/главное меню.md",
+    "docs/variable/Именование переменных в Python/Запрещенные и нежелательные имена.md",
+    "docs/variable/Основные характеристики переменных",
+    "docs/variable/Именование переменных в Python/Без названия",
+    "docs/variable/Именование переменных в Python/Имена публичных и непубличных переменных.md",
+    "docs/variable/Именование переменных в Python/Правила именования переменных.md",
+    "docs/variable/Именование переменных в Python/Рекомендации по именованию переменных.md",
+    "docs/variable/Именование переменных в Python",
+    "docs/Learn the Basic.md",
+    "docs/variable/Работа с переменными в python",
+    "docs/variable/Работа с переменными в python/04-Accumulators.md",
+    "docs/variable/Работа с переменными в python/02-Expressions.md",
+    "docs/variable/Работа с переменными в python/08-Data Storage Variables.md",
+    "docs/variable/Работа с переменными в python/07-Loop Variables.md",
+    "docs/variable/Работа с переменными в python/06-Boolean Flags.md",
+    "docs/variable/Работа с переменными в python/05-Temporary Variables.md",
+    "docs/variable/Работа с переменными в python/03-Object Counters.md",
+    "src/temp.py",
+    "temp.py",
     "docs/basic-syntax/02-identifiers.md",
+    "docs/basic-syntax/03-keywords.md",
     "docs/basic-syntax/04-indentation.md",
-    "docs/basic-syntax/05-multiline.md",
-    "docs/basic-syntax/06-strings.md",
-    "docs/basic-syntax/08-blank-lines.md",
-    "docs/basic-syntax/09-input.md",
-    "docs/basic-syntax/10-multi-statements.md",
-    "docs/basic-syntax/11-suites.md",
-    "docs/basic-syntax/12-cli.md",
+    "docs/variable",
     "past/data_types2.py",
-    "src/data_types2.py",
-    "src/data_types (copy).py",
-    "past/quiz.py",
-    "past/practis.py",
-    "past/meme.py",
-    "past/main.py",
-    "past/loops.py",
-    "past/list_methods.py",
     "assets/jabloko.jpg",
-    "Python learn.md",
-    "Basic Syntax.md",
-    "главное меню.md",
     "jabloko.jpg"
   ]
 }
