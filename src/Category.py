@@ -1,3 +1,28 @@
+def _print_nested(value, indent=2):
+    """Рекурсивно печатает списки и словари с красивыми отступами."""
+    spaces = " " * indent
+
+    if isinstance(value, list):
+        if value:
+            for i, item in enumerate(value, start=1):
+                print(f"{spaces}{i}. {item}")
+        else:
+            print(f"{spaces}(пусто)")
+        return
+
+    if isinstance(value, dict):
+        if not value:
+            print(f"{spaces}(пусто)")
+            return
+
+        for key, nested in value.items():
+            print(f"{spaces}- {key}:")
+            _print_nested(nested, indent + 4)
+        return
+
+    print(f"{spaces}{value}")
+
+
 def show_all(data):
     """Показать все категории, включая холодильник с подкатегориями."""
     if not data:
@@ -6,31 +31,9 @@ def show_all(data):
 
     print("\n" + "=" * 50)
 
-    for key in data:
-        value = data[key]
-
-        # Если значение — список, значит это "обычная" категория
-        if isinstance(value, list):
-            print(f"\n{key}:")
-            if value:
-                for i in range(len(value)):
-                    print(f"  {i + 1}. {value[i]}")
-            else:
-                print("  (пусто)")
-
-        # Если значение — словарь, значит это категория с подкатегориями (например холодильник)
-        elif isinstance(value, dict):
-            print(f"\n{key}:")
-            subcats = value.keys()
-            podsubcats = subcats.keys()
-            for sub in podsubcats:
-                items = value[sub]
-                print(f"  - {sub}:")
-                if items:
-                    for i in range(len(items)):
-                        print(f"      {i + 1}. {items[i]}")
-                else:
-                    print("      (пусто)")
+    for key, value in data.items():
+        print(f"\n{key}:")
+        _print_nested(value, indent=2)
 
     print("\n" + "=" * 50 + "\n")
 
@@ -111,18 +114,50 @@ def add_item_to_fridge(data):
         return
 
     sub = subcats[idx]
-    product = input(f"Введите продукт для '{sub}': ").strip()
+    target = fridge[sub]
+
+    selected_path = ["Холодильник", sub]
+
+    if isinstance(target, dict):
+        inner_subcats = list(target.keys())
+        if not inner_subcats:
+            print("В выбранной подкатегории пока нет групп для добавления.")
+            return
+
+        print(f"\nГруппы в '{sub}':")
+        for i in range(len(inner_subcats)):
+            print(f"  {i + 1}. {inner_subcats[i]}")
+
+        inner_choice = input("Выберите номер группы: ").strip()
+        if not inner_choice.isdigit():
+            print("Неверный ввод.")
+            return
+
+        inner_idx = int(inner_choice) - 1
+        if inner_idx < 0 or inner_idx >= len(inner_subcats):
+            print("Неверный номер.")
+            return
+
+        inner_sub = inner_subcats[inner_idx]
+        target = target[inner_sub]
+        selected_path.append(inner_sub)
+
+    if not isinstance(target, list):
+        print("Неподдерживаемый формат данных в 'Холодильник'.")
+        return
+
+    product = input(f"Введите продукт для '{selected_path[-1]}': ").strip()
 
     if product == "":
         print("Продукт не может быть пустым.")
         return
 
-    if product in fridge[sub]:
-        print(f"'{product}' уже есть в '{sub}'.")
+    if product in target:
+        print(f"'{product}' уже есть в '{selected_path[-1]}'.")
         return
 
-    fridge[sub].append(product)
-    print(f"'{product}' добавлен в 'Холодильник' -> '{sub}'!")
+    target.append(product)
+    print(f"'{product}' добавлен в '{' -> '.join(selected_path)}'!")
 
 
 def create_fridge_with_defaults(data):
